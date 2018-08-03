@@ -276,6 +276,7 @@ Suspend-Service -Name "eventlog"                            # Pause a service
 Stop-Service -Name "eventlog"                               # Stopping a service
 Test-Connection localhost                                   # Ping
 Get-Service | Where-Object { $_.Status -eq "Stopped" }      # Get all services where the status is "Stopped"
+Get-Content sample.csv | ConvertFrom-Csv  -Delimiter ";"    # Serialize csv into object 
 $p = get-process | convertto-csv                            # Convert and object to csv
 $p | convertfrom-csv                                        # Convers csv to an object
 Get-Process | Sort-Object -Property Id                      # Sort object
