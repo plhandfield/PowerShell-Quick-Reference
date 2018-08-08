@@ -293,4 +293,5 @@ Get-ChildItem -Recurse | Select-String -Pattern "bob"       # Search for a strin
 Get-Process | Tee-Object -FilePath output.txt               # Output the command Get-Process into a file
 Write-Progress                                              # Show progressbar in the console
 Get-Content "t.txt" | Measure-Object -Character -Line -Word # Calculate the Number of characters, lines and word in a file
+Get-Content CPP.csv -First 1                                # Reads the first row of a file
 ```
